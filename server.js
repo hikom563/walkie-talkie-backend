@@ -10,7 +10,7 @@ const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
     origin: process.env.NODE_ENV === 'production' 
-      ? ["https://your-frontend-domain.vercel.app", "https://your-custom-domain.com"]
+      ? ["https://walkie-talkie-2hhx.onrender.com/", "https://your-custom-domain.com"]
       : ["http://localhost:3000"],
     methods: ["GET", "POST"],
     credentials: true
@@ -20,7 +20,7 @@ const io = socketIo(server, {
 // Middleware
 app.use(cors({
   origin: process.env.NODE_ENV === 'production'
-    ? ["https://your-frontend-domain.vercel.app", "https://your-custom-domain.com"]
+    ? ["https://walkie-talkie-2hhx.onrender.com/", "https://your-custom-domain.com"]
     : ["http://localhost:3000"],
   credentials: true
 }));
